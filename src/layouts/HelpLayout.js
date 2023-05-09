@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 
+
 const HelpLayout = () => {
     return (  
         <div className="help-layout py-md-5 text-bg-primary">
@@ -11,7 +12,6 @@ const HelpLayout = () => {
                     <NavLink className="btn btn-outline-warning me-3"  to="faq">View the FAQ</NavLink>
                     <NavLink className="btn btn-warning" to="contact">Contact Us</NavLink>
                 </nav>
-
                 <Outlet />
             </div>
 

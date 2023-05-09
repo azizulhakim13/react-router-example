@@ -1,129 +1,142 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Link, Outlet } from "react-router-dom";
+import {FaFacebookF, FaGoogle, FaLinkedinIn, FaYoutube, FaArrowCircleRight } from 'react-icons/fa';
 
 export default function RootLayout() {
     return (
         <div className="root-layout">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
-                <div className="container-fluid">
-                <a className="navbar-brand" href="/">Responsive offcanvas navbar</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="offcanvas offcanvas-end text-bg-dark" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-                    <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
-                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <header>
+                <div className="bg-primary"> 
+                <div className="container">
+                    <div className="topbar d-lg-flex flex-wrap align-items-center justify-content-center justify-content-lg-start text-white py-2">
+                    <p className="mb-1 mb-lg-0 me-auto">Reliable & Affordable Fiber Optic Service (FIOS)</p>
+                    <div className="d-md-flex text-end">
+                        <div className="d-flex pe-5 pb-1 pb-lg-0">
+                        <i className="fa-solid fa-envelope-open-text fs-5 pe-2"></i>
+                        <a className="text-white" href="contact.html">info@peerexnetworks.com</a>
+                        </div>
+                        <div className="d-flex">
+                        <i className="fa-solid fa-headphones-simple fs-5 pe-2"></i>
+                            <a className="text-white" href="contact.html"> 09639733733</a>
+                        </div>
                     </div>
-                    <div className="offcanvas-body">
-                    <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li className="nav-item">
-                            <NavLink className="nav-NavLink pe-3" aria-current="page" to="/">Home</NavLink>
+                    </div>
+                </div>
+                </div>
+            
+                <nav id="navbar_top" className="navbar navbar-expand-lg navbar-dark shadow-lg">
+                <div className="container d-flex flex-wrap justify-content-center align-items-center">
+                    <div className="d-flex align-items-center me-md-auto text-dark text-decoration-none pb-2 pb-lg-0">
+                    <div className="d-grid text-center">
+                        <a className="pb-1" href="/"><img src="assets/images/logo.png" alt="logo"/></a>
+                        
+                    </div>
+                    </div>
+        
+                    <ul className="nav nav-pills text-end">
+                        <li className="nav-item fw-semibold">
+                            <NavLink to="/" className="nav-NavLink pe-3">Home</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-NavLink pe-3" to="about">About</NavLink>
+                        <li className="nav-item fw-semibold">
+                            <a href="https://portal.iccbd.com/customer/login" rel="noopener" target="_blank" className="nav-NavLink pe-3">My Account</a>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-NavLink pe-3" to="help">Help</NavLink>
+                        <li className="nav-item fw-semibold">
+                            <NavLink href="https://PEEREXnetworks.speedtestcustom.com/" target="_blank" className="nav-NavLink pe-3">Speed Test</NavLink>
                         </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-NavLink dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                            </a>
-                        <ul className="dropdown-menu">
-                            <li><NavLink className="dropdown-item" to="/">Action</NavLink></li>
-                            <li><NavLink className="dropdown-item" to="/about">Another action</NavLink></li>
-                            <li>
-                            <hr className="dropdown-divider"/>
-                            </li>
-                            <li><a className="dropdown-item" href="/">Something else here</a></li>
-                        </ul>
+                        <li className="nav-item fw-semibold">
+                            <NavLink className="nav-NavLink pe-3" aria-current="page" to="contact-us">Contact</NavLink>
                         </li>
+                    <li className="nav-item fw-semibold"><a href="connectivity.html" className="btn btn-primary me-10 mb-10 mb-md-0">Connectivity form</a></li>
+                    <li className="nav-item fw-semibold"><a href="ticket.html" className="btn btn-outline-secondary">Create Ticket</a></li>
                     </ul>
-                    <form className="d-flex mt-3 mt-lg-0" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                    </div>
                 </div>
-                </div>
-            </nav>
+                </nav>
+            </header>
+
             <main>
                 <Outlet />
-            </main> 
-            <footer className="bg-light">
-                <div className="py-5 container">
-                    <div className="row">
-                        <div className="col-6 col-md-2 mb-3">
-                            <h5>Section</h5>
-                            <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Features</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Pricing</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">FAQs</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">About</a></li>
-                            </ul>
-                        </div>
+            </main>
 
-                        <div className="col-6 col-md-2 mb-3">
-                            <h5>Section</h5>
-                            <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Features</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Pricing</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">FAQs</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">About</a></li>
-                            </ul>
-                        </div>
-
-                        <div className="col-6 col-md-2 mb-3">
-                            <h5>Section</h5>
-                            <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Features</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Pricing</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">FAQs</a></li>
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">About</a></li>
-                            </ul>
-                        </div>
-
-                        <div className="col-md-5 offset-md-1 mb-3">
-                            <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Monthly digest of what's new and exciting from us.</p>
-                            <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                                <label for="newsletter1" className="visually-hidden">Email address</label>
-                                <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
-                                <button className="btn btn-primary" type="button">Subscribe</button>
-                            </div>
-                            </form>
-                        </div>
+            <footer className="bg-light py-4 py-lg-60">
+                <div className="container">
+                    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+                    <div className="col-xl-3">
+                        <a href="index.html"><img className="pb-3" src="assets/images/logo.png" alt="logo"/></a>
+                        <p className="mb-0">Powered by PEEREX.<br/> Reliable & Affordable Fiber Optic Service (FIOS)</p>
                     </div>
+                    <div className="col-xl-2 footer-widget-1 ps-lg-5">
+                        <h4 className="mb-3 mb-lg-25 fs-5">Navigation</h4>
+                        <ul className="list-unstyled">
+                        <li>
+                            <FaArrowCircleRight className="me-2" /><a href="index.html">Home</a>
+                        </li>
+                        <li >
+                            <FaArrowCircleRight className="me-2" /><Link href="https://portal.peerexnetworks.com/customer/login" target="_blank" >My Account</Link>
+                        </li>
+                        <li >
+                            <FaArrowCircleRight className="me-2" /><Link href="http://PEEREXnetworks.speedtestcustom.com/" target="_blank">Speed Test</Link>
+                        </li>
+                        <li >
+                            <FaArrowCircleRight className="me-2" /><a href="connectivity.html">Connectivity Form</a>
+                        </li>
+                        <li >
+                            <FaArrowCircleRight className="me-2" /><a href="ticket.html">Create Ticket</a>
+                        </li>
+                        <li >
+                            <FaArrowCircleRight className="me-2" /><a href="contact.html">Contact Us</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div className="col-xl-2 footer-widget-2 ps-lg-5">
+                        <h4 className="mb-3 mb-lg-25 fs-5">Call Us 24/7</h4>
+                        <ul className="list-unstyled">
+                        <li>
+                            09639733733,
+                        </li>
+                        <li >
+                            +8801312733761,
+                        </li>
+                        <li >
+                            +8801312733760
+                        </li>
+                        </ul>
+                        <h4 className="fs-5">Email Us</h4>
+                        <ul className="list-unstyled">
+                        <li>
+                            info@peerexnetworks.com
+                        </li>
+                        </ul>
+                    </div>
+                    <div className="col-xl-3 footer-widget-3 ps-lg-5">
+                        <h4 className="mb-3 mb-lg-25 fs-5">Contact Us</h4>
+                        <ul className="list-unstyled">
+                        <li>
+                            12/D, Lane: 6, Plot: I/15-18, Pallabi, Mirpur, Dhaka-1216.
 
-                    <div className="d-flex flex-column flex-sm-1row justify-content-between py-4 my-4 border-top">
-                    <p>© 2023 Company, Inc. All rights reserved.</p>
-                    <ul className="list-unstyled d-flex">
-                        <li className="ms-3">
-                        <a className="link-body-emphasis" href="/">
-                            <svg className="bi" width="24" height="24">
-                            <use href="#twitter"></use>
-                            </svg>
-                        </a>
                         </li>
-                        <li className="ms-3">
-                            <a className="link-body-emphasis" href="/">
-                                <svg className="bi" width="24" height="24">
-                                <use href="#twitter"></use>
-                                </svg>
-                            </a>
+                        </ul>
+                    </div>
+                    <div className="col-xl-2 footer-widget-4">
+                        <h4 className="mb-3 mb-lg-25 fs-5">Find Us</h4>
+                        <ul className="list-unstyled">
+                        <li className="social-icons border-0 pt-2">
+                            <Link href="https://www.facebook.com/iccbroadband/" aria-label="facebook" target="_blank">
+                                <FaFacebookF />
+                            </Link>
+                            <Link className="mx-1" aria-label="google" href="https://icc.com.bd/" target="_blank">
+                                <FaGoogle />
+                            </Link>
+                            <Link className="me-1" href="https://www.linkedin.com/company/icc-communication-ltd/mycompany/" target="_blank" aria-label="linkedin">
+                                < FaLinkedinIn />    
+                            </Link>
+                            <Link href="https://www.youtube.com/@ICCCommunicationLtd" target="_blank" aria-label="youtube">
+                                <FaYoutube />    
+                            </Link>
                         </li>
-                        <li className="ms-3">
-                            <a className="link-body-emphasis" href="/">
-                                <svg className="bi" width="24" height="24">
-                                <use href="#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
+                    </div>
+                    <div>
+                    <img className="img-fluid pt-4" src="assets/images/ssl-partners.jpeg" alt="parterns"/>
                     </div>
                 </div>
             </footer>
