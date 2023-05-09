@@ -27,7 +27,7 @@ export default function RootLayout() {
                 <div className="container d-flex flex-wrap justify-content-center align-items-center">
                     <div className="d-flex align-items-center me-md-auto text-dark text-decoration-none pb-2 pb-lg-0">
                     <div className="d-grid text-center">
-                        <a className="pb-1" href="/"><img src="assets/images/logo.png" alt="logo"/></a>
+                        <a className="pb-1" href="/"><img src={require('../images/logo.png')} alt="logo"/></a>
                         
                     </div>
                     </div>
@@ -60,7 +60,7 @@ export default function RootLayout() {
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
                     <div className="col-xl-3">
-                        <a href="index.html"><img className="pb-3" src="assets/images/logo.png" alt="logo"/></a>
+                        <a href="index.html"><img className="pb-3" src={require('../images/logo.png')} alt="logo"/></a>
                         <p className="mb-0">Powered by PEEREX.<br/> Reliable & Affordable Fiber Optic Service (FIOS)</p>
                     </div>
                     <div className="col-xl-2 footer-widget-1 ps-lg-5">
@@ -134,9 +134,6 @@ export default function RootLayout() {
                         </li>
                         </ul>
                     </div>
-                    </div>
-                    <div>
-                    <img className="img-fluid pt-4" src="assets/images/ssl-partners.jpeg" alt="parterns"/>
                     </div>
                 </div>
             </footer>
