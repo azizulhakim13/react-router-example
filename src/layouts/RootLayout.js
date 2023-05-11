@@ -1,55 +1,14 @@
-import { NavLink, Link, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import {FaFacebookF, FaGoogle, FaLinkedinIn, FaYoutube, FaArrowCircleRight } from 'react-icons/fa';
+import NavBar from "../components/NavBar";
 
 export default function RootLayout() {
     return (
         <div className="root-layout">
             <header>
-                <div className="bg-primary"> 
-                <div className="container">
-                    <div className="topbar d-lg-flex flex-wrap align-items-center justify-content-center justify-content-lg-start text-white py-2">
-                    <p className="mb-1 mb-lg-0 me-auto">Reliable & Affordable Fiber Optic Service (FIOS)</p>
-                    <div className="d-md-flex text-end">
-                        <div className="d-flex pe-5 pb-1 pb-lg-0">
-                        <i className="fa-solid fa-envelope-open-text fs-5 pe-2"></i>
-                        <a className="text-white" href="contact.html">info@peerexnetworks.com</a>
-                        </div>
-                        <div className="d-flex">
-                        <i className="fa-solid fa-headphones-simple fs-5 pe-2"></i>
-                            <a className="text-white" href="contact.html"> 09639733733</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
             
-                <nav id="navbar_top" className="navbar navbar-expand-lg navbar-dark shadow-lg">
-                <div className="container d-flex flex-wrap justify-content-center align-items-center">
-                    <div className="d-flex align-items-center me-md-auto text-dark text-decoration-none pb-2 pb-lg-0">
-                    <div className="d-grid text-center">
-                        <a className="pb-1" href="/"><img src={require('../images/logo.png')} alt="logo"/></a>
-                        
-                    </div>
-                    </div>
-        
-                    <ul className="nav nav-pills text-end">
-                        <li className="nav-item fw-semibold">
-                            <NavLink to="/" className="nav-NavLink pe-3">Home</NavLink>
-                        </li>
-                        <li className="nav-item fw-semibold">
-                            <a href="https://portal.iccbd.com/customer/login" rel="noopener" target="_blank" className="nav-NavLink pe-3">My Account</a>
-                        </li>
-                        <li className="nav-item fw-semibold">
-                            <NavLink href="https://PEEREXnetworks.speedtestcustom.com/" target="_blank" className="nav-NavLink pe-3">Speed Test</NavLink>
-                        </li>
-                        <li className="nav-item fw-semibold">
-                            <NavLink className="nav-NavLink pe-3" aria-current="page" to="contact-us">Contact</NavLink>
-                        </li>
-                    <li className="nav-item fw-semibold"><a href="connectivity.html" className="btn btn-primary me-10 mb-10 mb-md-0">Connectivity form</a></li>
-                    <li className="nav-item fw-semibold"><a href="ticket.html" className="btn btn-outline-secondary">Create Ticket</a></li>
-                    </ul>
-                </div>
-                </nav>
+                <NavBar />
+
             </header>
 
             <main>
@@ -137,6 +96,14 @@ export default function RootLayout() {
                     </div>
                 </div>
             </footer>
+            <div className="copyright-bar bg-primary py-2">
+                <div className="container text-white">
+                    <div className="d-flex justify-content-center">
+                    <p className="mb-0 pb-md-0">© <span className="fw-semibold">
+                        <a className="text-white" href="https://www.icc.com.bd/" target="_blank">PEEREX.</a></span>  All Rights Reserved by  PEEREX.</p>
+                    </div>
+                </div>
+    </div>
         </div>
     )
 }

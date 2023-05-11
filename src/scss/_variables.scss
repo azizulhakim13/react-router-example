@@ -133,6 +133,38 @@ $enable-gradients: false;
     width: 100%;
     top: 0;
   }
+
+  // services section
+.services {
+  .service-column {
+    border-radius: 10px;
+    background: linear-gradient($primary 0 0) no-repeat;
+    background-size: 100% 0%;
+    background-position: 0% 100%;
+    transition: all ease .5s;
+
+    &:hover {
+      background-size: 100% 100%;
+      transition: all ease .5s;
+
+      p {
+        color: var(--#{$prefix}white);
+      }
+    }
+  }
+}
+
+  // underline on heading
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 75px;
+    height: 4px;
+    background:  var(--#{$prefix}primary);
+    bottom: 0;
+    left: calc(50% - 35px);
+  }
   
   .topbar {
     a, p {
@@ -148,14 +180,14 @@ $enable-gradients: false;
     font-size: 12px;
   }
   
-  .hero-section-about,
-  .banner {
-    // background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/hero-bg.png');
+  .hero-section, .banner {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.png');
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
     width: 100%; 
-    height: 500px;
+    margin-top: 185px;
+    height: 400px;
   }
   
   .banner {
@@ -176,6 +208,30 @@ $enable-gradients: false;
   
   .swiper-button-next::after,  .swiper-button-prev::after{
     display: none;
+  }
+
+  // connectivity
+  .connectivity, .ticket {
+    iframe {
+      height: 700px;
+    }
+  }
+
+  @media(max-width: 980px) {
+    .connectivity, .ticket {
+      iframe {
+        height: 750px;
+      }
+    }
+    .banner {
+      height: 150px;
+    }
+  }
+
+  // map
+  .map-style {
+    height: 500px;
+    margin-bottom: -7px;
   }
 
 // buttons
